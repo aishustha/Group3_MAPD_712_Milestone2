@@ -14,9 +14,6 @@ import {
   Text,
   StyleSheet,
   TouchableOpacity,
-  TextInput,
-  Image,
-  Alert,
 } from 'react-native';
 
 function HomeScreen({navigation}) {
