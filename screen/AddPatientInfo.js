@@ -1,14 +1,50 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
   StyleSheet,
   TouchableOpacity,
   TextInput,
-  SafeAreaView, ScrollView,
+  SafeAreaView,
+  ScrollView,
 } from 'react-native';
 
 function AddPatientInfoScreen({navigation}) {
+  // let patientInfoObject;
+  let [patientInfo, setPatientInfo] = useState({}); // hook
+
+  function nameChangeHandler(name) {
+    let newObject = {name: name};
+    // do not lose previous state, instead overwrite on top of previous state
+    // ... -> is called spread operator
+    setPatientInfo({...patientInfo, ...newObject});
+  }
+
+  function weightChangeHandler(weight) {
+    let newObject = {weight: weight};
+    setPatientInfo({...patientInfo, ...newObject});
+  }
+
+  // make n/w calls here
+  function submitPatientInfo() {
+    const URL = 'https://safe-fjord-88503.herokuapp.com';
+    const requestOptions = {
+      method: 'POST',
+      body: patientInfo,
+    };
+
+    fetch(URL, requestOptions)
+      .then(response => response.json()) // must convert the response to json
+      .then(result => {
+        // handle success
+        console.log('patientInfo was submitted');
+      })
+      .catch(err => {
+        // handle error
+        console.error('Could not submit patientInfo', err);
+      });
+  }
+
   return (
     <SafeAreaView>
       <ScrollView style={styles.wrapperContainer}>
@@ -16,20 +52,17 @@ function AddPatientInfoScreen({navigation}) {
         <Text style={styles.pageDesc}>Basic Information</Text>
 
         <View style={styles.inputContent}>
-          <Text style={styles.textfieldTitle}>
-            Name
-          </Text>
+          <Text style={styles.textfieldTitle}>Name</Text>
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Name"
             keyboardType="string"
+            onChangeText={nameChangeHandler}
           />
         </View>
 
         <View style={styles.inputContent}>
-          <Text style={styles.textfieldTitle}>
-            Weight
-          </Text>
+          <Text style={styles.textfieldTitle}>Weight</Text>
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Weight(Kg)"
@@ -37,11 +70,8 @@ function AddPatientInfoScreen({navigation}) {
           />
         </View>
 
-        
         <View style={styles.inputContent}>
-          <Text style={styles.textfieldTitle}>
-            Height
-          </Text>
+          <Text style={styles.textfieldTitle}>Height</Text>
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Height (ft)"
@@ -49,16 +79,10 @@ function AddPatientInfoScreen({navigation}) {
           />
         </View>
 
-
-
         <Text style={styles.pageDesc}>Medical Information</Text>
 
-
-
         <View style={styles.inputContent}>
-          <Text style={styles.textfieldTitle}>
-            Blood Group
-          </Text>
+          <Text style={styles.textfieldTitle}>Blood Group</Text>
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Blood Group"
@@ -66,11 +90,8 @@ function AddPatientInfoScreen({navigation}) {
           />
         </View>
 
-
         <View style={styles.inputContent}>
-          <Text style={styles.textfieldTitle}>
-            Blood Pressure
-          </Text>
+          <Text style={styles.textfieldTitle}>Blood Pressure</Text>
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Blood Pressure"
@@ -78,11 +99,8 @@ function AddPatientInfoScreen({navigation}) {
           />
         </View>
 
-
         <View style={styles.inputContent}>
-          <Text style={styles.textfieldTitle}>
-            Respiratory Rate
-          </Text>
+          <Text style={styles.textfieldTitle}>Respiratory Rate</Text>
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Respiratory Rate"
@@ -90,11 +108,8 @@ function AddPatientInfoScreen({navigation}) {
           />
         </View>
 
-
         <View style={styles.inputContent}>
-          <Text style={styles.textfieldTitle}>
-            Blood Oxygen Level
-          </Text>
+          <Text style={styles.textfieldTitle}>Blood Oxygen Level</Text>
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Blood Oxygen level"
@@ -102,11 +117,8 @@ function AddPatientInfoScreen({navigation}) {
           />
         </View>
 
-
         <View style={styles.inputContent}>
-          <Text style={styles.textfieldTitle}>
-            Heart Rate
-          </Text>
+          <Text style={styles.textfieldTitle}>Heart Rate</Text>
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Heart Rate"
@@ -114,11 +126,8 @@ function AddPatientInfoScreen({navigation}) {
           />
         </View>
 
-
         <View style={styles.inputContent}>
-          <Text style={styles.textfieldTitle}>
-            Medical Condition 1
-          </Text>
+          <Text style={styles.textfieldTitle}>Medical Condition 1</Text>
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Medical Condition"
@@ -126,11 +135,8 @@ function AddPatientInfoScreen({navigation}) {
           />
         </View>
 
-
         <View style={styles.inputContent}>
-          <Text style={styles.textfieldTitle}>
-            Medical Condition 2
-          </Text>
+          <Text style={styles.textfieldTitle}>Medical Condition 2</Text>
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Medical Condition"
@@ -138,24 +144,21 @@ function AddPatientInfoScreen({navigation}) {
           />
         </View>
 
-
         <View style={styles.inputContent}>
-          <Text style={styles.textfieldTitle}>
-            Medical Condition 3
-          </Text>
+          <Text style={styles.textfieldTitle}>Medical Condition 3</Text>
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Medical Condition"
             keyboardType="string"
           />
         </View>
-
 
         <View>
           <TouchableOpacity
             activeOpacity={0.8}
             title="Add PatientInfo Screen"
-            onPress={() => navigation.navigate('Listing')}>
+            // onPress={() => navigation.navigate('Listing')}
+            onPress={submitPatientInfo}>
             <Text style={styles.loginButtonBorder}>Done</Text>
           </TouchableOpacity>
         </View>
@@ -221,5 +224,4 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
     borderRadius: 6,
   },
-
 });
