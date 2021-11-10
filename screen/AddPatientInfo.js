@@ -10,9 +10,9 @@ import {
 } from 'react-native';
 
 function AddPatientInfoScreen({navigation}) {
-  // let patientInfoObject;
   let [patientInfo, setPatientInfo] = useState({}); // hook
 
+  //text change functionhandlers
   function nameChangeHandler(name) {
     let newObject = {name: name};
     // do not lose previous state, instead overwrite on top of previous state
@@ -21,28 +21,83 @@ function AddPatientInfoScreen({navigation}) {
   }
 
   function weightChangeHandler(weight) {
-    let newObject = {weight: weight};
-    setPatientInfo({...patientInfo, ...newObject});
+    let weightobject = {weight: weight};
+    setPatientInfo({...patientInfo, ...weightobject});
+  }
+
+  function heightChangeHandler(height) 
+  {
+    let heightobject = {height: height};
+    setPatientInfo({...patientInfo, ...heightobject});
+  }
+
+  function bloodGChangeHandler(bloodgroup) 
+  {
+    let bloodgroupobject = {bloodgroup: bloodgroup};
+    setPatientInfo({...patientInfo, ...bloodgroupobject});
+  }
+
+  function bloodPChangeHandler(bloodpressure) 
+  {
+    let bloodPobject = {bloodpressure: bloodpressure};
+    setPatientInfo({...patientInfo, ...bloodPobject});
+  }
+
+  function respRChangeHandler(respiratoryrate) 
+  {
+    let respRobject = {respiratoryRate: respiratoryrate};
+    setPatientInfo({...patientInfo, ...respRobject});
+  }
+
+  function bloodOChangeHandler(bloodoxygen) 
+  {
+    let bloodOobject = {bloodoxygen: bloodoxygen};
+    setPatientInfo({...patientInfo, ...bloodOobject});
+  }
+
+  function heartrateChangeHandler(heartrate) 
+  {
+    let heartrateobject = {heartrate: heartrate};
+    setPatientInfo({...patientInfo, ...heartrateobject});
+  }
+
+  function med1ChangeHandler(medicalcondition1) 
+  {
+    let med1object = {medicalcondition1:medicalcondition1};
+    setPatientInfo({...patientInfo, ...med1object});
+  }
+
+  function med2ChangeHandler(medicalcondition2) 
+  {
+    let med2object = {medicalcondition2:medicalcondition2};
+    setPatientInfo({...patientInfo, ...med2object});
+  }
+
+  function med3ChangeHandler(medicalcondition3) 
+  {
+    let med3object = {medicalcondition3:medicalcondition3};
+    setPatientInfo({...patientInfo, ...med3object});
   }
 
   // make n/w calls here
-  function submitPatientInfo() {
-    const URL = 'https://safe-fjord-88503.herokuapp.com';
-    const requestOptions = {
-      method: 'POST',
-      body: patientInfo,
-    };
+  function submitPatientInfo() 
+  {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
 
-    fetch(URL, requestOptions)
-      .then(response => response.json()) // must convert the response to json
-      .then(result => {
-        // handle success
-        console.log('patientInfo was submitted');
-      })
-      .catch(err => {
-        // handle error
-        console.error('Could not submit patientInfo', err);
-      });
+    var raw = JSON.stringify(patientInfo);
+
+    var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+  };
+
+fetch("https://safe-fjord-88503.herokuapp.com/patient-info", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
   }
 
   return (
@@ -67,6 +122,7 @@ function AddPatientInfoScreen({navigation}) {
             style={styles.textfieldInput}
             placeholder="Your Weight(Kg)"
             keyboardType="numeric"
+            onChangeText={weightChangeHandler}
           />
         </View>
 
@@ -76,6 +132,7 @@ function AddPatientInfoScreen({navigation}) {
             style={styles.textfieldInput}
             placeholder="Your Height (ft)"
             keyboardType="numeric"
+            onChangeText={heightChangeHandler}
           />
         </View>
 
@@ -87,6 +144,7 @@ function AddPatientInfoScreen({navigation}) {
             style={styles.textfieldInput}
             placeholder="Your Blood Group"
             keyboardType="string"
+            onChangeText={bloodGChangeHandler}
           />
         </View>
 
@@ -96,6 +154,7 @@ function AddPatientInfoScreen({navigation}) {
             style={styles.textfieldInput}
             placeholder="Your Blood Pressure"
             keyboardType="string"
+            onChangeText={bloodPChangeHandler}
           />
         </View>
 
@@ -105,6 +164,7 @@ function AddPatientInfoScreen({navigation}) {
             style={styles.textfieldInput}
             placeholder="Your Respiratory Rate"
             keyboardType="string"
+            onChangeText={respRChangeHandler}
           />
         </View>
 
@@ -114,6 +174,7 @@ function AddPatientInfoScreen({navigation}) {
             style={styles.textfieldInput}
             placeholder="Your Blood Oxygen level"
             keyboardType="numeric"
+            onChangeText={bloodOChangeHandler}
           />
         </View>
 
@@ -123,6 +184,7 @@ function AddPatientInfoScreen({navigation}) {
             style={styles.textfieldInput}
             placeholder="Your Heart Rate"
             keyboardType="numeric"
+            onChangeText={heartrateChangeHandler}
           />
         </View>
 
@@ -132,6 +194,7 @@ function AddPatientInfoScreen({navigation}) {
             style={styles.textfieldInput}
             placeholder="Your Medical Condition"
             keyboardType="string"
+            onChangeText={med1ChangeHandler}
           />
         </View>
 
@@ -141,6 +204,7 @@ function AddPatientInfoScreen({navigation}) {
             style={styles.textfieldInput}
             placeholder="Your Medical Condition"
             keyboardType="string"
+            onChangeText={med2ChangeHandler}
           />
         </View>
 
@@ -150,6 +214,7 @@ function AddPatientInfoScreen({navigation}) {
             style={styles.textfieldInput}
             placeholder="Your Medical Condition"
             keyboardType="string"
+            onChangeText={med3ChangeHandler}
           />
         </View>
 
