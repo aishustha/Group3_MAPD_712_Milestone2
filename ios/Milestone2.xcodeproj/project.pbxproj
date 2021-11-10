@@ -11,9 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		6C6986BD019153B6DBBD8FF4 /* libPods-Milestone2-Milestone2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7502940809E65FAA907CE3E5 /* libPods-Milestone2-Milestone2Tests.a */; };
-		7D8EFB6131FE043B96077B9D /* libPods-Milestone2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F52D3FD76CA6C782C593C172 /* libPods-Milestone2.a */; };
+		3541B0EE255B8EC62EA29CB5 /* libPods-Milestone2-Milestone2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE500950D8C2094F9ABD19FA /* libPods-Milestone2-Milestone2Tests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		BC56B15F4B94B788FD0F5FDA /* libPods-Milestone2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA7D60FFDDBE515961190DB /* libPods-Milestone2.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +36,13 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Milestone2/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Milestone2/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Milestone2/main.m; sourceTree = "<group>"; };
-		28B9CD492BC2C2428EE1248A /* Pods-Milestone2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Milestone2.debug.xcconfig"; path = "Target Support Files/Pods-Milestone2/Pods-Milestone2.debug.xcconfig"; sourceTree = "<group>"; };
-		32E6C78A1070DB50A6EAA4D1 /* Pods-Milestone2-Milestone2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Milestone2-Milestone2Tests.debug.xcconfig"; path = "Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		7502940809E65FAA907CE3E5 /* libPods-Milestone2-Milestone2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Milestone2-Milestone2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56142C0B56113581F3E987CD /* Pods-Milestone2-Milestone2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Milestone2-Milestone2Tests.release.xcconfig"; path = "Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		74186CA6D11003FF582B9E49 /* Pods-Milestone2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Milestone2.release.xcconfig"; path = "Target Support Files/Pods-Milestone2/Pods-Milestone2.release.xcconfig"; sourceTree = "<group>"; };
+		7CA7D60FFDDBE515961190DB /* libPods-Milestone2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Milestone2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Milestone2/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EA482CDD271356AED7298FDB /* Pods-Milestone2-Milestone2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Milestone2-Milestone2Tests.release.xcconfig"; path = "Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		9969A80B269034DF372837A4 /* Pods-Milestone2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Milestone2.debug.xcconfig"; path = "Target Support Files/Pods-Milestone2/Pods-Milestone2.debug.xcconfig"; sourceTree = "<group>"; };
+		AE500950D8C2094F9ABD19FA /* libPods-Milestone2-Milestone2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Milestone2-Milestone2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED290A62480B9FF6DA369952 /* Pods-Milestone2-Milestone2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Milestone2-Milestone2Tests.debug.xcconfig"; path = "Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F52D3FD76CA6C782C593C172 /* libPods-Milestone2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Milestone2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F669CFD26DFD951DE82EC373 /* Pods-Milestone2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Milestone2.release.xcconfig"; path = "Target Support Files/Pods-Milestone2/Pods-Milestone2.release.xcconfig"; sourceTree = "<group>"; };
@@ -51,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C6986BD019153B6DBBD8FF4 /* libPods-Milestone2-Milestone2Tests.a in Frameworks */,
+				3541B0EE255B8EC62EA29CB5 /* libPods-Milestone2-Milestone2Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D8EFB6131FE043B96077B9D /* libPods-Milestone2.a in Frameworks */,
+				BC56B15F4B94B788FD0F5FDA /* libPods-Milestone2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0F5453EB7376420AB57738FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9969A80B269034DF372837A4 /* Pods-Milestone2.debug.xcconfig */,
+				74186CA6D11003FF582B9E49 /* Pods-Milestone2.release.xcconfig */,
+				ED290A62480B9FF6DA369952 /* Pods-Milestone2-Milestone2Tests.debug.xcconfig */,
+				56142C0B56113581F3E987CD /* Pods-Milestone2-Milestone2Tests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* Milestone2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,8 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				F52D3FD76CA6C782C593C172 /* libPods-Milestone2.a */,
-				7502940809E65FAA907CE3E5 /* libPods-Milestone2-Milestone2Tests.a */,
+				7CA7D60FFDDBE515961190DB /* libPods-Milestone2.a */,
+				AE500950D8C2094F9ABD19FA /* libPods-Milestone2-Milestone2Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,7 +147,7 @@
 				00E356EF1AD99517003FC87E /* Milestone2Tests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				6B00AD9872FA80B482AD2EE1 /* Pods */,
+				0F5453EB7376420AB57738FE /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -156,12 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "Milestone2Tests" */;
 			buildPhases = (
-				28B9BBCCCBCE607BDDB8D635 /* [CP] Check Pods Manifest.lock */,
+				CDFF75C4A31A41F046BB18D3 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				7796BD732ED258C5C6995A40 /* [CP] Embed Pods Frameworks */,
-				38092BAFA45B29A997D31C64 /* [CP] Copy Pods Resources */,
+				18ED63B627F105B85B4AFE47 /* [CP] Embed Pods Frameworks */,
+				1082512AEA81EB4AFBFA869F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,14 +191,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Milestone2" */;
 			buildPhases = (
-				AAD2795BDA95F2070A9B7EFD /* [CP] Check Pods Manifest.lock */,
+				ABE40E7286E4F0DAA74D5CD2 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				48A483FA0E75DDBD13680FB1 /* [CP] Embed Pods Frameworks */,
-				3D5615E6933949DE3266DB60 /* [CP] Copy Pods Resources */,
+				AF8F6637058E37E2879109CD /* [CP] Embed Pods Frameworks */,
+				EB40A3A4A301C3D7ED4CE59B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,7 +279,80 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		28B9BBCCCBCE607BDDB8D635 /* [CP] Check Pods Manifest.lock */ = {
+		1082512AEA81EB4AFBFA869F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		18ED63B627F105B85B4AFE47 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABE40E7286E4F0DAA74D5CD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Milestone2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF8F6637058E37E2879109CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Milestone2/Pods-Milestone2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Milestone2/Pods-Milestone2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Milestone2/Pods-Milestone2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDFF75C4A31A41F046BB18D3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -287,24 +374,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		38092BAFA45B29A997D31C64 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3D5615E6933949DE3266DB60 /* [CP] Copy Pods Resources */ = {
+		EB40A3A4A301C3D7ED4CE59B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -319,62 +389,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Milestone2/Pods-Milestone2-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		48A483FA0E75DDBD13680FB1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Milestone2/Pods-Milestone2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Milestone2/Pods-Milestone2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Milestone2/Pods-Milestone2-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7796BD732ED258C5C6995A40 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AAD2795BDA95F2070A9B7EFD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Milestone2-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -429,7 +443,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32E6C78A1070DB50A6EAA4D1 /* Pods-Milestone2-Milestone2Tests.debug.xcconfig */;
+			baseConfigurationReference = ED290A62480B9FF6DA369952 /* Pods-Milestone2-Milestone2Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -456,7 +470,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA482CDD271356AED7298FDB /* Pods-Milestone2-Milestone2Tests.release.xcconfig */;
+			baseConfigurationReference = 56142C0B56113581F3E987CD /* Pods-Milestone2-Milestone2Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -480,7 +494,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28B9CD492BC2C2428EE1248A /* Pods-Milestone2.debug.xcconfig */;
+			baseConfigurationReference = 9969A80B269034DF372837A4 /* Pods-Milestone2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -506,7 +520,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F669CFD26DFD951DE82EC373 /* Pods-Milestone2.release.xcconfig */;
+			baseConfigurationReference = 74186CA6D11003FF582B9E49 /* Pods-Milestone2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

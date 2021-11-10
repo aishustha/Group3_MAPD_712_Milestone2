@@ -9,12 +9,7 @@ Milestone: 3
 */
 
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 function HomeScreen({navigation}) {
   return (
@@ -27,7 +22,7 @@ function HomeScreen({navigation}) {
             activeOpacity={0.8}
             title="Add Patient Screen"
             onPress={() => navigation.navigate('Patient')}>
-            <Text style={styles.loginButtonBackground}>Login as a User</Text>
+            <Text style={styles.loginButtonBackground}>Add Patient</Text>
           </TouchableOpacity>
         </View>
 
@@ -35,10 +30,17 @@ function HomeScreen({navigation}) {
           <TouchableOpacity
             activeOpacity={0.8}
             title="Add PatientInfo Screen"
+            onPress={() => navigation.navigate('AddPatientInfo')}>
+            <Text style={styles.loginButtonBorder}>Add Patient Info</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View>
+          <TouchableOpacity
+            activeOpacity={0.8}
+            title="View Patient Info"
             onPress={() => navigation.navigate('PatientInfo')}>
-            <Text style={styles.loginButtonBorder}>
-              Add Patient Info
-            </Text>
+            <Text style={styles.loginButtonBorder}>View Patient Info</Text>
           </TouchableOpacity>
         </View>
       </View>
