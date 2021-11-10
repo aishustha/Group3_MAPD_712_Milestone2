@@ -7,6 +7,7 @@ import {
   TextInput,
   SafeAreaView,
   ScrollView,
+  Alert,
 } from 'react-native';
 
 function AddPatientInfoScreen({navigation}) {
@@ -86,8 +87,14 @@ function AddPatientInfoScreen({navigation}) {
 
     fetch('https://safe-fjord-88503.herokuapp.com/patient-info', requestOptions)
       .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));
+      .then(result => {
+        Alert.alert('Success', 'Patient Info Submitted', [{text: 'OK'}]);
+        console.log(result);
+      })
+      .catch(error => {
+        Alert.alert('Error', 'Something went wrong', [{text: 'OK'}]);
+        console.log('error', error);
+      });
   }
 
   return (

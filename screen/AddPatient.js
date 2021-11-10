@@ -7,9 +7,15 @@ import {
   TextInput,
   SafeAreaView,
   ScrollView,
+  Alert,
 } from 'react-native';
 
 function AddPatientScreen({navigation}) {
+  const registerPatient = () => {
+    () => navigation.navigate('Listing');
+    Alert.alert('Success', 'Patient Registered Successfully', [{text: 'OK'}]);
+  };
+
   return (
     <SafeAreaView>
       <ScrollView style={styles.wrapperContainer}>
@@ -65,7 +71,7 @@ function AddPatientScreen({navigation}) {
           <TouchableOpacity
             activeOpacity={0.8}
             title="Add Patient Screen"
-            onPress={() => navigation.navigate('Listing')}>
+            onPress={registerPatient}>
             <Text style={styles.loginButtonBorder}>Register Patient</Text>
           </TouchableOpacity>
         </View>
