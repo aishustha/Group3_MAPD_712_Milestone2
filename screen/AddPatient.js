@@ -5,7 +5,8 @@ import {
   StyleSheet,
   TouchableOpacity,
   TextInput,
-  SafeAreaView, ScrollView,
+  SafeAreaView,
+  ScrollView,
 } from 'react-native';
 
 function AddPatientScreen({navigation}) {
@@ -16,64 +17,49 @@ function AddPatientScreen({navigation}) {
         <Text style={styles.pageDesc}>Basic Information</Text>
 
         <View style={styles.inputContent}>
-          <Text style={styles.textfieldTitle}>
-            Name
-          </Text>
+          <Text style={styles.textfieldTitle}>Name</Text>
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Name"
-            keyboardType="string"
+            keyboardType="default"
           />
         </View>
 
         <View style={styles.inputContent}>
-          <Text style={styles.textfieldTitle}>
-            Email
-          </Text>
+          <Text style={styles.textfieldTitle}>Email</Text>
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Email"
-            keyboardType="string"
+            keyboardType="default"
           />
         </View>
 
-        
         <View style={styles.inputContent}>
-          <Text style={styles.textfieldTitle}>
-            Address
-          </Text>
+          <Text style={styles.textfieldTitle}>Address</Text>
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Address"
-            keyboardType="string"
+            keyboardType="default"
           />
         </View>
 
-
-
         <View style={styles.inputContent}>
-          <Text style={styles.textfieldTitle}>
-            Phone
-          </Text>
+          <Text style={styles.textfieldTitle}>Phone</Text>
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Phone"
-            keyboardType="string"
+            keyboardType="default"
           />
         </View>
 
-
         <View style={styles.inputContent}>
-          <Text style={styles.textfieldTitle}>
-            Emergency Contact
-          </Text>
+          <Text style={styles.textfieldTitle}>Emergency Contact</Text>
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Emergency Contact"
-            keyboardType="string"
+            keyboardType="default"
           />
         </View>
-
 
         <View>
           <TouchableOpacity
@@ -144,5 +130,4 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
     borderRadius: 6,
   },
-
 });

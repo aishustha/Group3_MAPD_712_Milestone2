@@ -25,79 +25,69 @@ function AddPatientInfoScreen({navigation}) {
     setPatientInfo({...patientInfo, ...weightobject});
   }
 
-  function heightChangeHandler(height) 
-  {
+  function heightChangeHandler(height) {
     let heightobject = {height: height};
     setPatientInfo({...patientInfo, ...heightobject});
   }
 
-  function bloodGChangeHandler(bloodgroup) 
-  {
+  function bloodGChangeHandler(bloodgroup) {
     let bloodgroupobject = {bloodgroup: bloodgroup};
     setPatientInfo({...patientInfo, ...bloodgroupobject});
   }
 
-  function bloodPChangeHandler(bloodpressure) 
-  {
+  function bloodPChangeHandler(bloodpressure) {
     let bloodPobject = {bloodpressure: bloodpressure};
     setPatientInfo({...patientInfo, ...bloodPobject});
   }
 
-  function respRChangeHandler(respiratoryrate) 
-  {
+  function respRChangeHandler(respiratoryrate) {
     let respRobject = {respiratoryRate: respiratoryrate};
     setPatientInfo({...patientInfo, ...respRobject});
   }
 
-  function bloodOChangeHandler(bloodoxygen) 
-  {
+  function bloodOChangeHandler(bloodoxygen) {
     let bloodOobject = {bloodoxygen: bloodoxygen};
     setPatientInfo({...patientInfo, ...bloodOobject});
   }
 
-  function heartrateChangeHandler(heartrate) 
-  {
+  function heartrateChangeHandler(heartrate) {
     let heartrateobject = {heartrate: heartrate};
     setPatientInfo({...patientInfo, ...heartrateobject});
   }
 
-  function med1ChangeHandler(medicalcondition1) 
-  {
-    let med1object = {medicalcondition1:medicalcondition1};
+  function med1ChangeHandler(medicalcondition1) {
+    let med1object = {medicalcondition1: medicalcondition1};
     setPatientInfo({...patientInfo, ...med1object});
   }
 
-  function med2ChangeHandler(medicalcondition2) 
-  {
-    let med2object = {medicalcondition2:medicalcondition2};
+  function med2ChangeHandler(medicalcondition2) {
+    let med2object = {medicalcondition2: medicalcondition2};
     setPatientInfo({...patientInfo, ...med2object});
   }
 
-  function med3ChangeHandler(medicalcondition3) 
-  {
-    let med3object = {medicalcondition3:medicalcondition3};
+  function med3ChangeHandler(medicalcondition3) {
+    let med3object = {medicalcondition3: medicalcondition3};
     setPatientInfo({...patientInfo, ...med3object});
   }
 
   // make n/w calls here
-  function submitPatientInfo() 
-  {
+  function submitPatientInfo() {
     var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append('Content-Type', 'application/json');
 
     var raw = JSON.stringify(patientInfo);
 
     var requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: raw,
-    redirect: 'follow'
-  };
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow',
+    };
 
-fetch("https://safe-fjord-88503.herokuapp.com/patient-info", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+    fetch('https://safe-fjord-88503.herokuapp.com/patient-info', requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
   }
 
   return (
@@ -111,7 +101,7 @@ fetch("https://safe-fjord-88503.herokuapp.com/patient-info", requestOptions)
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Name"
-            keyboardType="string"
+            keyboardType="default"
             onChangeText={nameChangeHandler}
           />
         </View>
@@ -143,7 +133,7 @@ fetch("https://safe-fjord-88503.herokuapp.com/patient-info", requestOptions)
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Blood Group"
-            keyboardType="string"
+            keyboardType="default"
             onChangeText={bloodGChangeHandler}
           />
         </View>
@@ -153,7 +143,7 @@ fetch("https://safe-fjord-88503.herokuapp.com/patient-info", requestOptions)
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Blood Pressure"
-            keyboardType="string"
+            keyboardType="default"
             onChangeText={bloodPChangeHandler}
           />
         </View>
@@ -163,7 +153,7 @@ fetch("https://safe-fjord-88503.herokuapp.com/patient-info", requestOptions)
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Respiratory Rate"
-            keyboardType="string"
+            keyboardType="default"
             onChangeText={respRChangeHandler}
           />
         </View>
@@ -193,7 +183,7 @@ fetch("https://safe-fjord-88503.herokuapp.com/patient-info", requestOptions)
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Medical Condition"
-            keyboardType="string"
+            keyboardType="default"
             onChangeText={med1ChangeHandler}
           />
         </View>
@@ -203,7 +193,7 @@ fetch("https://safe-fjord-88503.herokuapp.com/patient-info", requestOptions)
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Medical Condition"
-            keyboardType="string"
+            keyboardType="default"
             onChangeText={med2ChangeHandler}
           />
         </View>
@@ -213,7 +203,7 @@ fetch("https://safe-fjord-88503.herokuapp.com/patient-info", requestOptions)
           <TextInput
             style={styles.textfieldInput}
             placeholder="Your Medical Condition"
-            keyboardType="string"
+            keyboardType="default"
             onChangeText={med3ChangeHandler}
           />
         </View>
