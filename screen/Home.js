@@ -34,10 +34,10 @@ function HomeScreen({navigation}) {
         <View>
           <TouchableOpacity
             activeOpacity={0.8}
-            title="Add Patient Screen"
-            onPress={() => navigation.navigate('Patient')}>
+            title="Add PatientInfo Screen"
+            onPress={() => navigation.navigate('PatientInfo')}>
             <Text style={styles.loginButtonBorder}>
-              Login In as a Caregiver
+              Add Patient Info
             </Text>
           </TouchableOpacity>
         </View>
