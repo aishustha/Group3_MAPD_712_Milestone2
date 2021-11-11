@@ -11,10 +11,63 @@ import {
 } from 'react-native';
 
 function AddPatientScreen({navigation}) {
-  const registerPatient = () => {
-    () => navigation.navigate('Listing');
-    Alert.alert('Success', 'Patient Registered Successfully', [{text: 'OK'}]);
-  };
+  let [patientAdded, setPatientAdded] = useState({}); //hook
+
+  function nameHandler(name){
+    let newName = {name: name};
+    setPatientAdded({...patientAdded, ...newName});
+  }
+
+  function emailHandler(email){
+    let newEmail = {email: email};
+    setPatientAdded({...patientAdded, ...newEmail});
+  }
+
+  function addressHandler(address){
+    let newAddress = {address: address};
+    setPatientAdded({...patientAdded, ...newAddress});
+  }
+
+  function phoneHandler(phone){
+    let newPhone = {phone: phone};
+    setPatientAdded({...patientAdded, ...newPhone});
+  }
+
+  function emergencyHandler(emergency){
+    let newEmergency = {emergency: emergency};
+    setPatientAdded({...patientAdded, ...newEmergency});
+  }
+
+  // const registerPatient = () => {
+  //   () => navigation.navigate('Listing');
+  //   Alert.alert('Success', 'Patient Registered Successfully', [{text: 'OK'}]);
+  // };
+
+  function registerPatient() {
+    var myHeaders = new Headers();
+    myHeaders.append('Content-Type', 'application/json');
+
+    var raw = JSON.stringify(patientInfo);
+
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow',
+    };
+
+    fetch('https://safe-fjord-88503.herokuapp.com/patient', requestOptions)
+      .then(response => response.text())
+      .then(result => {
+        Alert.alert('Success', 'Patient Registered Successfully', [{text: 'OK'}]);
+        console.log(result);
+      })
+      .catch(error => {
+        Alert.alert('Error', 'Something went wrong', [{text: 'OK'}]);
+        console.log('error', error);
+      });
+  }
+
 
   return (
     <SafeAreaView>
@@ -28,6 +81,7 @@ function AddPatientScreen({navigation}) {
             style={styles.textfieldInput}
             placeholder="Your Name"
             keyboardType="default"
+            onChangeText={nameHandler}
           />
         </View>
 
@@ -37,6 +91,7 @@ function AddPatientScreen({navigation}) {
             style={styles.textfieldInput}
             placeholder="Your Email"
             keyboardType="default"
+            onChangeText={emailHandler}
           />
         </View>
 
@@ -46,6 +101,7 @@ function AddPatientScreen({navigation}) {
             style={styles.textfieldInput}
             placeholder="Your Address"
             keyboardType="default"
+            onChangeText={addressHandler}
           />
         </View>
 
@@ -55,6 +111,7 @@ function AddPatientScreen({navigation}) {
             style={styles.textfieldInput}
             placeholder="Your Phone"
             keyboardType="default"
+            onChangeText={phoneHandler}
           />
         </View>
 
@@ -64,6 +121,7 @@ function AddPatientScreen({navigation}) {
             style={styles.textfieldInput}
             placeholder="Your Emergency Contact"
             keyboardType="default"
+            onChangeText={emergencyHandler}
           />
         </View>
 
