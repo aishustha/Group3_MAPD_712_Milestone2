@@ -63,6 +63,16 @@ function PatientInfoScreen({navigation}) {
           <Text style={styles.pageDesc}>Patient Information</Text>
           <Text style={styles.textfieldTitle}>ID:{patientInfo?.id}</Text>
           <Text style={styles.textfieldTitle}>Name:{patientInfo?.name}</Text>
+          <Text style={styles.textfieldTitle}>Name:{patientInfo?.name}</Text>
+          <Text style={styles.textfieldTitle}>
+            bloodPressure:{patientInfo?.bloodPressure}
+          </Text>
+          <Text style={styles.textfieldTitle}>
+            respiratoryRate:{patientInfo?.respiratoryRate}
+          </Text>
+          <Text style={styles.textfieldTitle}>
+            heartBeatRate:{patientInfo?.heartBeatRate}
+          </Text>
         </View>
       </ScrollView>
     </SafeAreaView>
