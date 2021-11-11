@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -13,27 +13,27 @@ import {
 function AddPatientScreen({navigation}) {
   let [patientAdded, setPatientAdded] = useState({}); //hook
 
-  function nameHandler(name){
+  function nameHandler(name) {
     let newName = {name: name};
     setPatientAdded({...patientAdded, ...newName});
   }
 
-  function emailHandler(email){
+  function emailHandler(email) {
     let newEmail = {email: email};
     setPatientAdded({...patientAdded, ...newEmail});
   }
 
-  function addressHandler(address){
+  function addressHandler(address) {
     let newAddress = {address: address};
     setPatientAdded({...patientAdded, ...newAddress});
   }
 
-  function phoneHandler(phone){
+  function phoneHandler(phone) {
     let newPhone = {phone: phone};
     setPatientAdded({...patientAdded, ...newPhone});
   }
 
-  function emergencyHandler(emergency){
+  function emergencyHandler(emergency) {
     let newEmergency = {emergency: emergency};
     setPatientAdded({...patientAdded, ...newEmergency});
   }
@@ -47,7 +47,7 @@ function AddPatientScreen({navigation}) {
     var myHeaders = new Headers();
     myHeaders.append('Content-Type', 'application/json');
 
-    var raw = JSON.stringify(patientInfo);
+    var raw = JSON.stringify(patientAdded);
 
     var requestOptions = {
       method: 'POST',
@@ -56,10 +56,12 @@ function AddPatientScreen({navigation}) {
       redirect: 'follow',
     };
 
-    fetch('https://safe-fjord-88503.herokuapp.com/patient', requestOptions)
+    fetch('https://safe-fjord-88503.herokuapp.com/patient-info', requestOptions)
       .then(response => response.text())
       .then(result => {
-        Alert.alert('Success', 'Patient Registered Successfully', [{text: 'OK'}]);
+        Alert.alert('Success', 'Patient Registered Successfully', [
+          {text: 'OK'},
+        ]);
         console.log(result);
       })
       .catch(error => {
@@ -67,7 +69,6 @@ function AddPatientScreen({navigation}) {
         console.log('error', error);
       });
   }
-
 
   return (
     <SafeAreaView>
