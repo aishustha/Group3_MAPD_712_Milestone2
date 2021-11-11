@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, SafeAreaView, FlatList, StyleSheet} from 'react-native';
+import {View, Text, SafeAreaView, FlatList, StyleSheet, ScrollView} from 'react-native';
 
 function ViewAllPatient({navigation}) {
   let [patientInfo, setPatientInfo] = useState([]);
@@ -30,9 +30,15 @@ function ViewAllPatient({navigation}) {
           data={patientInfo}
           // keyExtractor={item.name}
           renderItem={({item}) => (
-            <Text>
-              {item.name}, {item.age}
-            </Text>
+            <ScrollView style={styles.infoContainer}>
+              <Text style={styles.title}>{item.name} </Text> 
+              <Text style={styles.text}> Age:  {item.age} </Text> 
+              <Text style={styles.text}> Height:  {item.height} </Text> 
+              <Text style={styles.text}> Address: {item.address} </Text>
+              <Text style={styles.text}> Contact Number: {item.contact_no} </Text>
+              <Text style={styles.text}> Blood Group: {item.blood_group} </Text>
+              <Text style={styles.text}> Remarks: {item.remarks} </Text>
+            </ScrollView>
           )}
         />
       </View>
@@ -48,4 +54,19 @@ const styles = StyleSheet.create({
     padding: 24,
     height: '100%',
   },
+
+  title : {
+      fontSize: 20,
+      fontWeight: 'bold',
+      color: 'black'
+  },
+  text: {
+      fontSize: 14,
+      color: 'black'
+  },
+
+  infoContainer: {
+      margin: 10
+  }
+
 });
