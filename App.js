@@ -18,6 +18,8 @@ import AddPatientScreen from './screen/AddPatient';
 import ListingScreen from './screen/Listing';
 import AddPatientInfoScreen from './screen/AddPatientInfo';
 import PatientInfoScreen from './screen/PatientInfo';
+import ViewAllPatient from './screen/ViewAllPatient';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +37,8 @@ function App() {
         <Stack.Screen name="Listing" component={ListingScreen} />
         <Stack.Screen name="AddPatientInfo" component={AddPatientInfoScreen} />
         <Stack.Screen name="PatientInfo" component={PatientInfoScreen} />
+        <Stack.Screen name="ViewAllPatient" component={ViewAllPatient} />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );

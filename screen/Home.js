@@ -43,6 +43,17 @@ function HomeScreen({navigation}) {
             <Text style={styles.loginButtonBorder}>View Patient Info</Text>
           </TouchableOpacity>
         </View>
+
+
+        <View>
+          <TouchableOpacity
+            activeOpacity={0.8}
+            title="View All Patient"
+            onPress={() => navigation.navigate('ViewAllPatient')}>
+            <Text style={styles.loginButtonBorder}>View All Patient</Text>
+          </TouchableOpacity>
+        </View>
+
       </View>
     </View>
   );
