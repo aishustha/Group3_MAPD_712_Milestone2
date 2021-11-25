@@ -44,7 +44,6 @@ function HomeScreen({navigation}) {
           </TouchableOpacity>
         </View>
 
-
         <View>
           <TouchableOpacity
             activeOpacity={0.8}
@@ -54,6 +53,16 @@ function HomeScreen({navigation}) {
           </TouchableOpacity>
         </View>
 
+        <View>
+          <TouchableOpacity
+            activeOpacity={0.8}
+            title="View All Patient"
+            onPress={() => navigation.navigate('ViewAllPatientRecords')}>
+            <Text style={styles.loginButtonBorder}>
+              View All Patient Records
+            </Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -76,7 +85,7 @@ const styles = StyleSheet.create({
     color: '#000',
     textAlign: 'center',
     position: 'absolute',
-    top: '40%',
+    top: '30%',
   },
 
   loginButtonBackground: {

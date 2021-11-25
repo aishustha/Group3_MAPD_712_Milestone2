@@ -9,11 +9,11 @@ import {
   ScrollView,
 } from 'react-native';
 
-function ViewAllPatient({navigation}) {
+function ViewAllPatientRecords({navigation}) {
   let [patientInfo, setPatientInfo] = useState([]);
 
   useEffect(() => {
-    const URL = `https://safe-fjord-88503.herokuapp.com/patient-info`;
+    const URL = `https://safe-fjord-88503.herokuapp.com/patient-test/`;
     const requestOptions = {
       method: 'GET',
     };
@@ -31,20 +31,38 @@ function ViewAllPatient({navigation}) {
       });
   }, []);
 
+  const filterUsers = () => {
+    console.log('@filterUsers');
+
+    const filteredUsers = patientInfo.filter(
+      i => i.heartBeatRate < 50 || i?.respiratoryRate < 70,
+    );
+    setPatientInfo(filteredUsers);
+  };
+
   return (
     <SafeAreaView>
       <View style={styles.wrapperContainer}>
+        <Button
+          title="View Critical Uers"
+          onPress={filterUsers}
+          style={styles.button}
+        />
         <FlatList
           data={patientInfo}
+          // keyExtractor={item.name}
           renderItem={({item}) => (
             <ScrollView style={styles.infoContainer}>
               <Text style={styles.title}>{item.name} </Text>
-              <Text style={styles.text}> Age: {item.age} </Text>
-              <Text style={styles.text}> Height: {item.height} </Text>
-              <Text style={styles.text}> Address: {item.address} </Text>
-              <Text style={styles.text}>Contact Number: {item.contact_no}</Text>
-              <Text style={styles.text}> Blood Group: {item.blood_group} </Text>
-              <Text style={styles.text}> Remarks: {item.remarks} </Text>
+              <Text style={styles.text}>
+                bloodPressure: {item.bloodPressure}
+              </Text>
+              <Text style={styles.text}>
+                respiratoryRate: {item.respiratoryRate}
+              </Text>
+              <Text style={styles.text}>
+                heartBeatRate: {item.heartBeatRate}
+              </Text>
             </ScrollView>
           )}
         />
@@ -53,7 +71,7 @@ function ViewAllPatient({navigation}) {
   );
 }
 
-export default ViewAllPatient;
+export default ViewAllPatientRecords;
 
 const styles = StyleSheet.create({
   wrapperContainer: {
