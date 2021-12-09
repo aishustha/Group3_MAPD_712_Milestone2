@@ -20,7 +20,7 @@ import PatientInfoScreen from './screen/PatientInfo';
 import ViewAllPatient from './screen/ViewAllPatient';
 import ViewAllPatientRecords from './screen/ViewAllPatientRecords';
 
-const Stack = createNativeStackNavigator();
+export const Stack = createNativeStackNavigator();
 
 function App() {
   return (

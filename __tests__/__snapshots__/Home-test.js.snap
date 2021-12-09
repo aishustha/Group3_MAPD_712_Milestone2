@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#ffffff",
+      "flex": 1,
+      "justifyContent": "center",
+      "position": "relative",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#000",
+        "fontSize": 32,
+        "position": "absolute",
+        "textAlign": "center",
+        "top": "30%",
+      }
+    }
+  >
+    We Care
+  </Text>
+  <View
+    style={
+      Object {
+        "bottom": 48,
+        "position": "absolute",
+      }
+    }
+  >
+    <View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        nativeID="animatedComponent"
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#000",
+              "borderRadius": 6,
+              "color": "#fff",
+              "display": "flex",
+              "fontSize": 16,
+              "letterSpacing": 2,
+              "padding": 16,
+              "paddingLeft": 48,
+              "paddingRight": 48,
+              "textAlign": "center",
+              "textTransform": "uppercase",
+              "width": "100%",
+            }
+          }
+        >
+          Add Patient
+        </Text>
+      </View>
+    </View>
+    <View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        nativeID="animatedComponent"
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "borderRadius": 6,
+              "borderWidth": 1,
+              "color": "#000",
+              "display": "flex",
+              "fontSize": 16,
+              "letterSpacing": 2,
+              "marginTop": 32,
+              "padding": 16,
+              "paddingLeft": 48,
+              "paddingRight": 48,
+              "textAlign": "center",
+              "textTransform": "uppercase",
+              "width": "100%",
+            }
+          }
+        >
+          Add Patient Info
+        </Text>
+      </View>
+    </View>
+    <View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        nativeID="animatedComponent"
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "borderRadius": 6,
+              "borderWidth": 1,
+              "color": "#000",
+              "display": "flex",
+              "fontSize": 16,
+              "letterSpacing": 2,
+              "marginTop": 32,
+              "padding": 16,
+              "paddingLeft": 48,
+              "paddingRight": 48,
+              "textAlign": "center",
+              "textTransform": "uppercase",
+              "width": "100%",
+            }
+          }
+        >
+          View Patient Info
+        </Text>
+      </View>
+    </View>
+    <View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        nativeID="animatedComponent"
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "borderRadius": 6,
+              "borderWidth": 1,
+              "color": "#000",
+              "display": "flex",
+              "fontSize": 16,
+              "letterSpacing": 2,
+              "marginTop": 32,
+              "padding": 16,
+              "paddingLeft": 48,
+              "paddingRight": 48,
+              "textAlign": "center",
+              "textTransform": "uppercase",
+              "width": "100%",
+            }
+          }
+        >
+          View All Patient
+        </Text>
+      </View>
+    </View>
+    <View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        nativeID="animatedComponent"
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "borderRadius": 6,
+              "borderWidth": 1,
+              "color": "#000",
+              "display": "flex",
+              "fontSize": 16,
+              "letterSpacing": 2,
+              "marginTop": 32,
+              "padding": 16,
+              "paddingLeft": 48,
+              "paddingRight": 48,
+              "textAlign": "center",
+              "textTransform": "uppercase",
+              "width": "100%",
+            }
+          }
+        >
+          View All Patient Records
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
