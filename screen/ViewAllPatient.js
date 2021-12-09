@@ -42,7 +42,7 @@ function ViewAllPatient({navigation}) {
               <Text style={styles.text}> Age: {item.age} </Text>
               <Text style={styles.text}> Height: {item.height} </Text>
               <Text style={styles.text}> Address: {item.address} </Text>
-              <Text style={styles.text}>Contact Number: {item.contact_no}</Text>
+              <Text style={styles.text}> Contact Number: {item.contact_no}</Text>
               <Text style={styles.text}> Blood Group: {item.blood_group} </Text>
               <Text style={styles.text}> Remarks: {item.remarks} </Text>
             </ScrollView>

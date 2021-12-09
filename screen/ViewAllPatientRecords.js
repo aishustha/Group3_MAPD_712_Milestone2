@@ -55,6 +55,9 @@ function ViewAllPatientRecords({navigation}) {
             <ScrollView style={styles.infoContainer}>
               <Text style={styles.title}>{item.name} </Text>
               <Text style={styles.text}>
+                ID: {item.id}
+              </Text>
+              <Text style={styles.text}>
                 bloodPressure: {item.bloodPressure}
               </Text>
               <Text style={styles.text}>
