@@ -20,28 +20,31 @@ import PatientInfoScreen from './screen/PatientInfo';
 import ViewAllPatient from './screen/ViewAllPatient';
 import ViewAllPatientRecords from './screen/ViewAllPatientRecords';
 
-export const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
+
+export const AppStack = () => (
+  <Stack.Navigator>
+    <Stack.Screen
+      name="Home"
+      component={HomeScreen}
+      options={{title: 'Home'}}
+    />
+    <Stack.Screen name="Patient" component={AddPatientScreen} />
+    <Stack.Screen name="Listing" component={ListingScreen} />
+    <Stack.Screen name="AddPatientInfo" component={AddPatientInfoScreen} />
+    <Stack.Screen name="PatientInfo" component={PatientInfoScreen} />
+    <Stack.Screen name="ViewAllPatient" component={ViewAllPatient} />
+    <Stack.Screen
+      name="ViewAllPatientRecords"
+      component={ViewAllPatientRecords}
+    />
+  </Stack.Navigator>
+);
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          //unique identity
-          name="Home"
-          component={HomeScreen}
-          options={{title: 'Home'}}
-        />
-        <Stack.Screen name="Patient" component={AddPatientScreen} />
-        <Stack.Screen name="Listing" component={ListingScreen} />
-        <Stack.Screen name="AddPatientInfo" component={AddPatientInfoScreen} />
-        <Stack.Screen name="PatientInfo" component={PatientInfoScreen} />
-        <Stack.Screen name="ViewAllPatient" component={ViewAllPatient} />
-        <Stack.Screen
-          name="ViewAllPatientRecords"
-          component={ViewAllPatientRecords}
-        />
-      </Stack.Navigator>
+      <AppStack />
     </NavigationContainer>
   );
 }

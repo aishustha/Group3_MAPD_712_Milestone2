@@ -20,7 +20,7 @@ function HomeScreen({navigation}) {
         <View>
           <TouchableOpacity
             activeOpacity={0.8}
-            title="Add Patient Screen"
+            title="Add Patient"
             onPress={() => navigation.navigate('Patient')}>
             <Text style={styles.loginButtonBackground}>Add Patient</Text>
           </TouchableOpacity>

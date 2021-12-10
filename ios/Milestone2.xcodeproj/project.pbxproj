@@ -44,8 +44,6 @@
 		AE500950D8C2094F9ABD19FA /* libPods-Milestone2-Milestone2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Milestone2-Milestone2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED290A62480B9FF6DA369952 /* Pods-Milestone2-Milestone2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Milestone2-Milestone2Tests.debug.xcconfig"; path = "Target Support Files/Pods-Milestone2-Milestone2Tests/Pods-Milestone2-Milestone2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F52D3FD76CA6C782C593C172 /* libPods-Milestone2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Milestone2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F669CFD26DFD951DE82EC373 /* Pods-Milestone2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Milestone2.release.xcconfig"; path = "Target Support Files/Pods-Milestone2/Pods-Milestone2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,18 +116,6 @@
 				AE500950D8C2094F9ABD19FA /* libPods-Milestone2-Milestone2Tests.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6B00AD9872FA80B482AD2EE1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				28B9CD492BC2C2428EE1248A /* Pods-Milestone2.debug.xcconfig */,
-				F669CFD26DFD951DE82EC373 /* Pods-Milestone2.release.xcconfig */,
-				32E6C78A1070DB50A6EAA4D1 /* Pods-Milestone2-Milestone2Tests.debug.xcconfig */,
-				EA482CDD271356AED7298FDB /* Pods-Milestone2-Milestone2Tests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
